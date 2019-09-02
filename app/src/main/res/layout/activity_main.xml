@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/btn_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="工厂系列：常规编码"/>
+
+        <Button
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/btn_simple_factory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="工厂系列：简单工厂"/>
+
+        <Button
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/btn_parmas_factory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="工厂系列：根据参数来配置"/>
+
+
+        <Button
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/btn_opt_factory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="工厂系列：根据配置文件来实现"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

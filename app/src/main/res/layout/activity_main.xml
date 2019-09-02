@@ -38,6 +38,13 @@
             android:layout_height="wrap_content"
             android:text="工厂系列：根据配置文件来实现"/>
 
+        <Button
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/btn_appearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="外观模式：模拟图片加载"/>
+
 
     </LinearLayout>
 

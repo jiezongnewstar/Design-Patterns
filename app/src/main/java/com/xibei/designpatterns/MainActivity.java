@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 
+import com.xibei.designpatterns.appearance.ImageLoad;
 import com.xibei.designpatterns.factory.Api;
 import com.xibei.designpatterns.factory.ApiImpl;
 import com.xibei.designpatterns.factory.ParameterFactory;
@@ -14,7 +15,9 @@ import com.xibei.designpatterns.factory.SimpleFactory;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btn_common, btn_simple_factory, btn_parmas_factory, btn_opt_factory;
+    private Button btn_common, btn_simple_factory,
+            btn_parmas_factory, btn_opt_factory,
+            btn_appearance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +28,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_simple_factory = findViewById(R.id.btn_simple_factory);
         btn_parmas_factory = findViewById(R.id.btn_parmas_factory);
         btn_opt_factory = findViewById(R.id.btn_opt_factory);
+        btn_appearance = findViewById(R.id.btn_appearance);
         btn_common.setOnClickListener(this);
         btn_simple_factory.setOnClickListener(this);
         btn_parmas_factory.setOnClickListener(this);
         btn_opt_factory.setOnClickListener(this);
+        btn_appearance.setOnClickListener(this);
 
 
     }
@@ -55,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_opt_factory:
                 Api api_properties = PropertiesFactory.createApi(this);
                 api_properties.create();
+                break;
+            case R.id.btn_appearance:
+                new ImageLoad("xibei").loadImage();
                 break;
 
 

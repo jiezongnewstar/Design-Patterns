@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.Button;
 
 
+import com.xibei.designpatterns.adapter.ChargeAdapter;
+import com.xibei.designpatterns.adapter.ChinaCharge;
+import com.xibei.designpatterns.adapter.USA;
 import com.xibei.designpatterns.appearance.ImageLoad;
 import com.xibei.designpatterns.factory.Api;
 import com.xibei.designpatterns.factory.ApiImpl;
@@ -17,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btn_common, btn_simple_factory,
             btn_parmas_factory, btn_opt_factory,
-            btn_appearance;
+            btn_appearance,btn_simple_adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_parmas_factory = findViewById(R.id.btn_parmas_factory);
         btn_opt_factory = findViewById(R.id.btn_opt_factory);
         btn_appearance = findViewById(R.id.btn_appearance);
+        btn_simple_adapter = findViewById(R.id.btn_simple_adapter);
         btn_common.setOnClickListener(this);
         btn_simple_factory.setOnClickListener(this);
         btn_parmas_factory.setOnClickListener(this);
         btn_opt_factory.setOnClickListener(this);
         btn_appearance.setOnClickListener(this);
+        btn_simple_adapter.setOnClickListener(this);
 
 
     }
@@ -63,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_appearance:
                 new ImageLoad("xibei").loadImage();
+                break;
+            case R.id.btn_simple_adapter:
+                ChinaCharge chinaCharge = new ChargeAdapter(new USA());
+                chinaCharge.chinaCharge();
                 break;
 
 

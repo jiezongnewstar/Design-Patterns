@@ -46,6 +46,15 @@
             android:text="外观模式：模拟图片加载"/>
 
 
+
+        <Button
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/btn_simple_adapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="适配器模式：简单适配思想"/>
+
+
     </LinearLayout>
 
 </ScrollView>
